@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risultati</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container text-center mt-5">
+        <h1 class="display-4">Risultati del Quiz</h1>
+        <p class="fs-3">Hai ottenuto <strong>{{ punteggio }}</strong> su <strong>{{ totale }}</strong>!</p>
+        <p class="fs-5">Domande saltate: <strong>{{ saltate|length }}</strong></p>
+        {% if saltate %}
+            <ul class="list-group mt-3">
+                {% for domanda_id in saltate %}
+                    <li class="list-group-item">{{ domande[domanda_id]['domanda'] }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <p class="fs-5">Risposte Mostrate: <strong>{{ mostrate|length }}</strong></p>
+        {% if mostrate %}
+            <ul class="list-group mt-3">
+                {% for domanda_id in mostrate %}
+                    <li class="list-group-item">{{ domande[domanda_id]['domanda'] }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <a href="/" class="btn btn-success mt-4">Ricomincia il quiz</a>
+    </div>
+</body>
+</html>
