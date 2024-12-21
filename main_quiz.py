@@ -7,8 +7,12 @@ import os
 QUIZ_STATE_FILE = 'quiz_state.json'
 
 # Leggi il file JSON delle domande
-with open('domande.json', 'r', encoding='utf-8') as f:
+with open('pull_finale.json', 'r', encoding='utf-8') as f:
     domande = json.load(f)
+
+# Verifica che domande sia un dizionario
+if not isinstance(domande, dict):
+    raise ValueError("Il file delle domande non contiene un dizionario valido.")
 
 app = Flask(__name__)
 app.secret_key = 'chiave_segreta'
@@ -47,8 +51,25 @@ def index():
 
     # Recupera la domanda corrente
     domanda_id = session['domande'][indice_corrente]
-    domanda = domande[domanda_id]
-    risposte = random.sample(domanda['risposte'], len(domanda['risposte']))
+
+    # Verifica se la domanda esiste nel dizionario
+    if str(domanda_id) in domande:
+        domanda = domande[str(domanda_id)]  # Usa str per garantire l'accesso corretto
+    else:
+        # Gestisci l'errore se la domanda non è presente nel dizionario
+        domanda = None
+        session['feedback'] = 'Errore: domanda non valida.'
+    
+    # Procedi solo se la domanda è valida
+    if domanda:
+        # Verifica se la domanda è un dizionario e contiene la chiave 'risposte'
+        if isinstance(domanda, dict) and 'risposte' in domanda and isinstance(domanda['risposte'], list):
+            risposte = random.sample(domanda['risposte'], len(domanda['risposte']))
+        else:
+            risposte = ["Errore: risposte non disponibili"]
+    else:
+        risposte = []
+
     feedback = session.pop('feedback', None)
 
     return render_template('quiz.html', domanda=domanda, risposte=risposte, indice=indice_corrente + 1, totale=len(session['domande']), feedback=feedback)
@@ -57,25 +78,35 @@ def index():
 def rispondi():
     azione = request.form.get('azione')
     domanda_id = session['domande'][session['indice']]
-    domanda = domande[domanda_id]
 
-    if azione == 'salta':
-        session['saltate'].append(domanda_id)
-        session['feedback'] = 'Domanda saltata!'
-        session['indice'] += 1
-    elif azione == 'mostra':
-        session['feedback'] = f'La risposta corretta è: {domanda["giusta"]}.'
-        session['mostrate'].append(domanda_id)
+    # Verifica che la domanda esista
+    if str(domanda_id) in domande:
+        domanda = domande[str(domanda_id)]
     else:
-        risposta = request.form.get('risposta')
-        if risposta == domanda['giusta']:
-            session['punti'] += 1
-            session['feedback'] = 'Corretto! 🎉'
-            session['indice'] += 1  # Avanza solo se la risposta è corretta
-        else:
-            # Se la risposta è sbagliata, non si avanza
-            session['feedback'] = f'Sbagliato! La risposta corretta era: {domanda["giusta"]}. Prova ancora.'
+        session['feedback'] = 'Errore: domanda non valida.'
+        return redirect(url_for('index'))
 
+    # Verifica che la domanda contenga la risposta giusta
+    if isinstance(domanda, dict) and 'giusta' in domanda:
+        if azione == 'salta':
+            session['saltate'].append(domanda_id)
+            session['feedback'] = 'Domanda saltata!'
+            session['indice'] += 1
+        elif azione == 'mostra':
+            session['feedback'] = f'La risposta corretta è: {domanda["giusta"]}.'
+            session['mostrate'].append(domanda_id)
+        else:
+            risposta = request.form.get('risposta')
+            if risposta == domanda['giusta']:
+                session['punti'] += 1
+                session['feedback'] = 'Corretto! 🎉'
+                session['indice'] += 1  # Avanza solo se la risposta è corretta
+            else:
+                # Se la risposta è sbagliata, non si avanza
+                session['feedback'] = f'Sbagliato! La risposta corretta era: {domanda["giusta"]}. Prova ancora.'
+    else:
+        session['feedback'] = 'Errore: domanda non valida.'
+    
     save_quiz_state(session)  # Salva lo stato del quiz
     return redirect(url_for('index'))
 
@@ -86,8 +117,9 @@ def risultati():
     saltate = session.get('saltate', [])
     mostrate = session.get('mostrate', [])
     if os.path.exists(QUIZ_STATE_FILE):
-        os.remove(QUIZ_STATE_FILE)  # Cancella stato salvato al termine del quiz
-    return render_template('risultati.html', punteggio=punteggio, totale=totale, saltate=saltate, mostrate=mostrate)
+        os.remove(QUIZ_STATE_FILE)  
+    
+    return render_template('risultati.html', punteggio=punteggio, totale=totale, saltate=saltate, mostrate=mostrate, domande=domande)
 
 @app.route('/reset')
 def reset():
