@@ -275,7 +275,7 @@
             "Tutte le precedenti",
             "Nessuna delle precedenti"
         ],
-        "giusta": "Tutte le precedent"
+        "giusta": "Tutte le precedenti"
     },
     "31": {
         "domanda": "In biometria in quale fase avviene la selection?",
@@ -337,7 +337,7 @@
             "Solo la magnificazione digitale",
             "La somma delle magnificazioni"
         ],
-        "giusta": "Solo la magnificazione ottica"
+        "giusta": "La somma delle magnificazioni"
     },
     "38": {
         "domanda": "La tecnologia di riconoscimento biometrico basata sull’iride:",
@@ -718,7 +718,7 @@
             "Il tasso di errore p per il quale si ha la probabilità di ZERO errori in N prove è circa p=3/N per un intervallo di confidenza del 95%",
             "Il tasso di errore p per il quale si ha la probabilità di ZERO errori in N prove è circa p=3/N per un intervallo di confidenza del 33%"
         ],
-        "giusta": "Il tasso di errore p per il quale si ha la probabilità di ZERO errori in N prove è circa p=3*N per un intervallo di confidenza del 95%"
+        "giusta": "Il tasso di errore p per il quale si ha la probabilità di ZERO errori in N prove è circa p=3/N per un intervallo di confidenza del 95%"
     },
     "80": {
         "domanda": "Quali tipi di apprendimento esistono?",
@@ -828,7 +828,7 @@
             "Vero",
             "Falso"
         ],
-        "giusta": "Falso"
+        "giusta": "Vero"
     },
     "93": {
         "domanda": "Il Transfer Learning permette di classificare immagini?",
@@ -952,7 +952,7 @@
             "Qualcosa che sai < Qualcosa che sei < Qualcosa che hai",
             "Qualcosa che hai < Qualcosa che sai < Qualcosa che sei"
         ],
-        "giusta": "Qualcosa che sai < Qualcosa che hai < Qualcosa che sei"
+        "giusta": "Qualcosa che hai < Qualcosa che sai < Qualcosa che sei"
     },
     "107": {
         "domanda": "Quali funzioni utilizza il filtro di Gabor per il filtraggio delle immagini?",
@@ -1432,7 +1432,7 @@
             "FMR(T) = FM(T)/Totale_Utenti",
             "FMR(T) = FM(T)/Totale_Impostori"
         ],
-        "giusta": "FMR(T) = 1 - FM(T)"
+        "giusta": "FMR(T) = FM(T)/Totale_Impostori"
     },
     "159": {
         "domanda": "In quale sensore avviene il rolling shutter?",
@@ -1806,11 +1806,9 @@
     "199": {
         "domanda": "Le tecniche di Transfer Learning mediante reti neurali in applicazioni biometriche tipicamente",
         "risposte": [
-            "Vero",
-            "Falso",
-            "Tutte le precedenti",
-            "Nessuna delle precedenti.",
-            "Prevedono un allenamento parziale della rete"
+            "Prevedono un allenamento parziale della rete",
+            "Prevedono un allenamento totale della rete",
+            "Nessuna delle precedenti."
         ],
         "giusta": "Prevedono un allenamento parziale della rete"
     },
@@ -2251,9 +2249,13 @@
     "246": {
         "domanda": "Cosa \u00e8 il temporal aliasing?",
         "risposte": [
-            "(inclusa l'esposizione parziale): se il flash della fotocamera si attiva solo per una parte del tempo di esposizione, l'illuminazione del flash potrebbe essere presente solo per alcune file di pixel in una determinata cornice \u2022 illuminazione fluorescente, \u2022 effetti strobo, \u2022 fulmini, \u2022 movimento molto veloce / scoppi di luce"
+            "(inclusa l'esposizione parziale): se il flash della fotocamera si attiva solo per una parte del tempo di esposizione, l'illuminazione del flash potrebbe essere presente solo per alcune file di pixel in una determinata cornice",
+            "\u2022 illuminazione fluorescente", 
+            "\u2022 effetti strobo", 
+            "\u2022 fulmini", 
+            "\u2022 movimento molto veloce / scoppi di luce"
         ],
-        "giusta": "(inclusa l'esposizione parziale): se il flash della fotocamera si attiva solo per una parte del tempo di esposizione, l'illuminazione del flash potrebbe essere presente solo per alcune file di pixel in una determinata cornice \u2022 illuminazione fluorescente, \u2022 effetti strobo, \u2022 fulmini, \u2022 movimento molto veloce / scoppi di luce"
+        "giusta": "(inclusa l'esposizione parziale): se il flash della fotocamera si attiva solo per una parte del tempo di esposizione, l'illuminazione del flash potrebbe essere presente solo per alcune file di pixel in una determinata cornice"
     },
     "247": {
         "domanda": "L\u2019illuminazione fluorescente causa problemi di temporal aliasing?",
@@ -2715,9 +2717,9 @@
     "303": {
         "domanda": "Quando si verifica l'underfitting?",
         "risposte": [
-            "Il underfitting si verifica quando il modello \u00e8 scarsamente adattato ai dati, a causa di errori elevati sia nell'allenamento che nei dati di test (non visti)"
+            "L'underfitting si verifica quando il modello \u00e8 scarsamente adattato ai dati, a causa di errori elevati sia nell'allenamento che nei dati di test (non visti)"
         ],
-        "giusta": "Il underfitting si verifica quando il modello \u00e8 scarsamente adattato ai dati, a causa di errori elevati sia nell'allenamento che nei dati di test (non visti)"
+        "giusta": "L'underfitting si verifica quando il modello \u00e8 scarsamente adattato ai dati, a causa di errori elevati sia nell'allenamento che nei dati di test (non visti)"
     },
     "304": {
         "domanda": "Quando si verifica l'Overfitting ?",
@@ -2789,10 +2791,10 @@
     "313": {
         "domanda": "In ordine commerciale quale avuto pi\u00f9 successo nelle tipologie di apprendimento?",
         "risposte": [
-            "Supervised, transfer learning, unsupervide, reinforcement learning.",
-            "Supervised, transfer learning, unsupervide."
+            "Supervised, transfer learning, unsupervised, reinforcement learning.",
+            "Supervised, transfer learning, unsupervised."
         ],
-        "giusta": "Supervised, transfer learning, unsupervide, reinforcement learning."
+        "giusta": "Supervised, transfer learning, unsupervised, reinforcement learning."
     },
     "314": {
         "domanda": "Il transfer learning permette di apprendere da simulazioni?",
@@ -2855,7 +2857,8 @@
     "321": {
         "domanda": "Come funziona la logica Fuzzy (sfocata)?",
         "risposte": [
-            "\u2022 Basato sui principi della facolt\u00e0 di ragionamento approssimativo che gli umani usano di fronte all'ambiguit\u00e0 linguistica \u2022 Gli ingressi e le uscite di un sistema fuzzy sono precisi, solo il ragionamento \u00e8 approssimativo"
+            "\u2022 Basato sui principi della facolt\u00e0 di ragionamento approssimativo che gli umani usano di fronte all'ambiguit\u00e0 linguistica",
+            "\u2022 Gli ingressi e le uscite di un sistema fuzzy sono precisi, solo il ragionamento \u00e8 approssimativo"
         ],
         "giusta": "\u2022 Basato sui principi della facolt\u00e0 di ragionamento approssimativo che gli umani usano di fronte all'ambiguit\u00e0 linguistica \u2022 Gli ingressi e le uscite di un sistema fuzzy sono precisi, solo il ragionamento \u00e8 approssimativo"
     },

@@ -7,7 +7,7 @@ import os
 QUIZ_STATE_FILE = 'quiz_state.json'
 
 # Leggi il file JSON delle domande
-with open('pull_finale.json', 'r', encoding='utf-8') as f:
+with open('pull_domande.json', 'r', encoding='utf-8') as f:
     domande = json.load(f)
 
 # Verifica che domande sia un dizionario
