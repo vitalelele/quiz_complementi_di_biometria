@@ -1,90 +1,44 @@
-
 # Quiz Complementi di Biometria
 
-App web basata su **Flask** per la gestione di un quiz sui complementi di biometria. Permette di rispondere a domande randomizzate con feedback immediato.
+Quiz a risposta multipla per il corso di Complementi di Biometria.
 
-## Requisiti
+## Setup
 
-- Python 3.6+
-- pip
+1. Ottieni il codice:
+```bash
+git clone https://github.com/vitalelele/quiz_complementi_di_biometria.git
+```
+oppure scarica il .zip dalla pagina del repository
 
-## Installazione
-
-1. **Clona il repository:**
-
-   ```bash
-   git clone https://github.com/vitalelele/quiz_complementi_di_biometria.git
-   cd quiz_complementi_di_biometria
-   ```
-
-2. **Crea e attiva un ambiente virtuale:**
-
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # Su Windows: venv\Scripts\activate
-   ```
-
-3. **Installa le dipendenze:**
-
-   ```bash
-   pip install flask
-   ```
-
-4. **Aggiungi il file `domande.json`:**
-
-   Assicurati di avere il file `domande.json` con le domande del quiz nella stessa directory.
-
-5. **Avvia il server:**
-
-   ```bash
-   python main_quiz.py
-   ```
-
-6. **Visita l'app:**
-
-   Vai su `http://127.0.0.1:5000` nel tuo browser.
-
-## Struttura del Progetto
-
-- `app.py`: Logica dell'applicazione Flask.
-- `domande.json`: Domande del quiz.
-- `templates/`: Template HTML.
-- `static/`: Risorse statiche (CSS, JS).
-- `requirements.txt`: Dipendenze Python.
-
-## Funzionamento
-
-1. **Inizio del quiz**: Le domande vengono caricate in ordine casuale.
-2. **Risposta**: Dopo ogni risposta, viene mostrato un feedback.
-3. **Salta domanda**: Le domande saltate vengono registrate.
-4. **Mostra risposta**: Mostra la risposta corretta senza avanzare al prossimo step.
-
-## Deploy su Heroku
-
-1. **Crea un'app su Heroku:**
-
-   ```bash
-   heroku create nome-della-tua-app
-   ```
-
-2. **Push del codice su Heroku:**
-
-   ```bash
-   git push heroku master
-   ```
-
-3. **Apri l'app:**
-
-   ```bash
-   heroku open
-   ```
-
-## Licenza
-
-MIT
+2. Entra nella cartella del progetto:
+```bash
+cd quiz_complementi_di_biometria
 ```
 
-### Modifiche:
-- Ho aggiunto gli spazi giusti per la chiarezza della formattazione.
-- Ho separato in modo visibile ogni passaggio per facilitarne la lettura e l'uso.
-****
+## Requisiti
+- Python 3.x
+- Flask (`pip install flask`)
+
+## Avvio Rapido
+
+1. Installa Flask:
+```bash
+pip install flask
+```
+
+2. Assicurati di avere nella cartella del progetto:
+- `main_quiz.py`
+- `pull_domande.json` (file con le domande)
+- cartella `templates/` con `quiz.html` e `risultati.html`
+
+3. Avvia l'applicazione:
+```bash
+python main_quiz.py
+```
+
+4. Apri nel browser:
+```
+http://localhost:5000
+```
+
+Il quiz presenta domande casuali con possibilità di saltare, vedere la risposta corretta e visualizzare il punteggio finale.
