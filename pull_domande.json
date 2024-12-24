@@ -2738,9 +2738,11 @@
     "306": {
         "domanda": "Come avviene il K-FCV?",
         "risposte": [
-            "1. In k-FCV, il set di dati originale \u00e8 suddiviso casualmente in k partizioni di uguale dimensione 2. Dalle partizioni k, uno viene conservato come dati di convalida per il test del modello e i restanti sottocampioni k - 1 vengono utilizzati per costruire il modello. 3. Dato che abbiamo k partizioni, il processo viene ripetuto k volte con ciascuno dei k sottocampioni usati esattamente una volta come dati di validazione"
+            "In k-FCV, il set di dati originale \u00e8 suddiviso casualmente in k partizioni di uguale dimensione",
+            "Dalle partizioni k, uno viene conservato come dati di convalida per il test del modello e i restanti sottocampioni k - 1 vengono utilizzati per costruire il modello.",
+            "Dato che abbiamo k partizioni, il processo viene ripetuto k volte con ciascuno dei k sottocampioni usati esattamente una volta come dati di validazione"
         ],
-        "giusta": "1. In k-FCV, il set di dati originale \u00e8 suddiviso casualmente in k partizioni di uguale dimensione 2. Dalle partizioni k, uno viene conservato come dati di convalida per il test del modello e i restanti sottocampioni k - 1 vengono utilizzati per costruire il modello. 3. Dato che abbiamo k partizioni, il processo viene ripetuto k volte con ciascuno dei k sottocampioni usati esattamente una volta come dati di validazione"
+        "giusta": "Dalle partizioni k, uno viene conservato come dati di convalida per il test del modello e i restanti sottocampioni k - 1 vengono utilizzati per costruire il modello."
     },
     "307": {
         "domanda": "Il K-FCV stratificato cosa fa?",
@@ -2860,7 +2862,7 @@
             "\u2022 Basato sui principi della facolt\u00e0 di ragionamento approssimativo che gli umani usano di fronte all'ambiguit\u00e0 linguistica",
             "\u2022 Gli ingressi e le uscite di un sistema fuzzy sono precisi, solo il ragionamento \u00e8 approssimativo"
         ],
-        "giusta": "\u2022 Basato sui principi della facolt\u00e0 di ragionamento approssimativo che gli umani usano di fronte all'ambiguit\u00e0 linguistica \u2022 Gli ingressi e le uscite di un sistema fuzzy sono precisi, solo il ragionamento \u00e8 approssimativo"
+        "giusta": "\u2022 Basato sui principi della facolt\u00e0 di ragionamento approssimativo che gli umani usano di fronte all'ambiguit\u00e0 linguistica"
     },
     "322": {
         "domanda": "Quali sono le componenti di una RBS?",
