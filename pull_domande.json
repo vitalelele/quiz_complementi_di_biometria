@@ -284,7 +284,7 @@
             "Feature Extraction",
             "Matching"
         ],
-        "giusta": "Enrollment"
+        "giusta": "Feature Extraction"
     },
     "32": {
         "domanda": "Un sistema biometrico vede come un umano",
@@ -828,7 +828,7 @@
             "Vero",
             "Falso"
         ],
-        "giusta": "Vero"
+        "giusta": "Falso"
     },
     "93": {
         "domanda": "Il Transfer Learning permette di classificare immagini?",
@@ -1579,7 +1579,7 @@
             "Entrambe le precedenti",
             "Nessuna delle precedenti"
         ],
-        "giusta": "Autenticazione"
+        "giusta": "Nessuna delle precedenti"
     },
     "175": {
         "domanda": "L'acquisizione multispettrale si può applicare con le impronte digitali",
