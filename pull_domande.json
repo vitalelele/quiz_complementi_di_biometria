@@ -2196,9 +2196,13 @@
     "240": {
         "domanda": "Come funziona un sensore CMOS, Complementary Metal-Oxide Semiconductor (Semiconduttore complementare ossido di metallo)?",
         "risposte": [
-            "Ogni singolo fotodiodo \u00e8 accoppiato ad un convertitore, riduttore di rumore, e circuiti di digitalizzazione. Il sistema del CMOS permette di gestire meglio Il singolo pixel e produce un rumore pi\u00f9 localizzato (filtrabile meglio). Il trend dei CMOS \u00e8 in costante ascesa. A causa dello scarso fattore di riempimento di CMOS, la fotosensibilit\u00e0 dei sensori CMOS \u00e8 scarsa in condizioni di scarsa illuminazione."
+            "Ogni singolo fotodiodo \u00e8 accoppiato ad un convertitore, riduttore di rumore, e circuiti di digitalizzazione.", 
+            "Il sistema del CMOS permette di gestire meglio Il singolo pixel e produce un rumore pi\u00f9 localizzato (filtrabile meglio).",
+            "Il trend dei CMOS \u00e8 in costante ascesa.",
+            "A causa dello scarso fattore di riempimento di CMOS, la fotosensibilit\u00e0 dei sensori CMOS \u00e8 scarsa in condizioni di scarsa illuminazione.",
+            "Tutte le precedenti"
         ],
-        "giusta": "Ogni singolo fotodiodo \u00e8 accoppiato ad un convertitore, riduttore di rumore, e circuiti di digitalizzazione. Il sistema del CMOS permette di gestire meglio Il singolo pixel e produce un rumore pi\u00f9 localizzato (filtrabile meglio). Il trend dei CMOS \u00e8 in costante ascesa. A causa dello scarso fattore di riempimento di CMOS, la fotosensibilit\u00e0 dei sensori CMOS \u00e8 scarsa in condizioni di scarsa illuminazione."
+        "giusta": "Tutte le precedenti"
     },
     "241": {
         "domanda": "Cosa servono le microlenti sopra il fotodettetore?",
