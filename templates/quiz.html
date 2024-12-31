@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
+    <title>Quiz Sistemi Biometrici</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="bg-light">
+<body onload="startTimer()" class="bg-light">
     <div class="container mt-5">
         <div class="text-center mb-4">
             <h1 class="display-5">Quiz Complementi di Biometria</h1>
@@ -15,12 +15,12 @@
         <div class="card p-4 shadow">
             <h2>Domanda {{ indice }} di {{ totale }}</h2>
             {% if feedback %}
-                <div class="alert {{ 'alert-success' if 'Corretto' in feedback else 'alert-warning' if 'saltata' in feedback else 'alert-danger' }} mt-3">
+                <div class="alert {{ 'alert-success' if 'Corretto' in feedback else 'alert-warning' if 'saltata' in feedback else 'alert-danger' }}" role="alert">
                     {{ feedback }}
                 </div>
             {% endif %}
             <p class="fs-5">{{ domanda['domanda'] }}</p>
-            <form method="post" action="/rispondi" id="quiz-form" onsubmit="return validateSelection(event)">
+            <form method="post" action="/rispondi" id="quiz-form" onsubmit="return validateSelection()">
                 {% for risposta in risposte %}
                     <div class="form-check">
                         <input type="radio" id="{{ risposta }}" name="risposta" value="{{ risposta }}" class="form-check-input">
@@ -29,27 +29,35 @@
                 {% endfor %}
                 <button type="submit" name="azione" value="invia" class="btn btn-primary mt-3">Invia</button>
                 <button type="submit" name="azione" value="salta" class="btn btn-secondary mt-3">Salta</button>
-                <button type="submit" name="azione" value="mostra" class="btn btn-info mt-3">Mostra Risposta</button>
+                <button type="submit" name="azione" value="mostra" class="btn btn-info mt-3" onclick="skipValidation()">Mostra Risposta</button>
             </form>
-
-            <script>
-                function validateSelection(event) {
-                    const buttonClicked = event.submitter.value; // Ottieni il valore del pulsante cliccato
-                    if (buttonClicked === "invia") {
-                        // Controlla se una risposta è selezionata solo per il pulsante "Invia"
-                        const selectedAnswer = document.querySelector('input[name="risposta"]:checked');
-                        if (!selectedAnswer) {
-                            alert("Seleziona una risposta prima di premere Invio.");
-                            return false; // Previene l'invio del modulo
-                        }
-                    }
-                    return true; // Permette l'invio per altri pulsanti
-                }
-            </script>
         </div>
         <div class="text-center mt-4">
             <a href="/reset" class="btn btn-danger">Ricomincia il Quiz</a>
         </div>
     </div>
+
+    <script>
+        function validateSelection() {
+            // Verifica se una risposta è stata selezionata
+            const selectedAnswer = document.querySelector('input[name="risposta"]:checked');
+            const action = document.querySelector('button[name="azione"]').value;
+
+            if (action === "invia" && !selectedAnswer) {
+                // Mostra il messaggio di avviso se nessuna risposta è stata selezionata
+                document.getElementById('feedback-alert').innerText = "Per favore, seleziona una risposta prima di inviare.";
+                document.getElementById('feedback-alert').classList.add('alert-danger');
+                return false; // Non invia il modulo
+            }
+            return true; // Continua con il submit del modulo
+        }
+
+        function skipValidation() {
+            // Rimuove il requisito di selezione della risposta per il pulsante "Mostra Risposta"
+            document.querySelectorAll('input[name="risposta"]').forEach(input => {
+                input.required = false;
+            });
+        }
+    </script>
 </body>
 </html>

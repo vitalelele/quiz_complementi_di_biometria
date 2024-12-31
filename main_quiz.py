@@ -3,14 +3,11 @@ import random
 import json
 import os
 
-# File per salvare lo stato del quiz
 QUIZ_STATE_FILE = 'quiz_state.json'
 
-# Leggi il file JSON delle domande
 with open('pull_domande.json', 'r', encoding='utf-8') as f:
     domande = json.load(f)
 
-# Verifica che domande sia un dizionario
 if not isinstance(domande, dict):
     raise ValueError("Il file delle domande non contiene un dizionario valido.")
 
@@ -23,7 +20,7 @@ def save_quiz_state(state):
         json.dump(state, f)
 
 def load_quiz_state():
-    """Carica lo stato del quiz dal file JSON, se esiste."""
+    """Carica lo stato del quiz dal file JSON, se esiste.""" 
     if os.path.exists(QUIZ_STATE_FILE):
         with open(QUIZ_STATE_FILE, 'r', encoding='utf-8') as f:
             return json.load(f)
@@ -31,7 +28,6 @@ def load_quiz_state():
 
 @app.route('/')
 def index():
-    # Carica stato salvato o inizia un nuovo quiz
     quiz_state = load_quiz_state()
     if quiz_state:
         session.update(quiz_state)
@@ -49,20 +45,15 @@ def index():
     if indice_corrente >= len(session['domande']):
         return redirect(url_for('risultati'))
 
-    # Recupera la domanda corrente
     domanda_id = session['domande'][indice_corrente]
 
-    # Verifica se la domanda esiste nel dizionario
     if str(domanda_id) in domande:
-        domanda = domande[str(domanda_id)]  # Usa str per garantire l'accesso corretto
+        domanda = domande[str(domanda_id)]  
     else:
-        # Gestisci l'errore se la domanda non è presente nel dizionario
         domanda = None
         session['feedback'] = 'Errore: domanda non valida.'
     
-    # Procedi solo se la domanda è valida
     if domanda:
-        # Verifica se la domanda è un dizionario e contiene la chiave 'risposte'
         if isinstance(domanda, dict) and 'risposte' in domanda and isinstance(domanda['risposte'], list):
             risposte = random.sample(domanda['risposte'], len(domanda['risposte']))
         else:
@@ -95,20 +86,25 @@ def rispondi():
         elif azione == 'mostra':
             session['feedback'] = f'La risposta corretta è: {domanda["giusta"]}.'
             session['mostrate'].append(domanda_id)
-        else:
+        elif azione == 'invia':
             risposta = request.form.get('risposta')
-            if risposta == domanda['giusta']:
-                session['punti'] += 1
-                session['feedback'] = 'Corretto! 🎉'
-                session['indice'] += 1  # Avanza solo se la risposta è corretta
+            if risposta:
+                if risposta == domanda['giusta']:
+                    session['punti'] += 1
+                    session['feedback'] = 'Corretto! 🎉'
+                    session['indice'] += 1  # Avanza solo se la risposta è corretta
+                else:
+                    # Se la risposta è sbagliata, non si avanza
+                    session['feedback'] = f'Sbagliato! La risposta corretta era: {domanda["giusta"]}. Prova ancora.'
             else:
-                # Se la risposta è sbagliata, non si avanza
-                session['feedback'] = f'Sbagliato! La risposta corretta era: {domanda["giusta"]}. Prova ancora.'
+                session['feedback'] = 'Per favore, seleziona una risposta prima di inviare.'
     else:
         session['feedback'] = 'Errore: domanda non valida.'
     
     save_quiz_state(session)  # Salva lo stato del quiz
     return redirect(url_for('index'))
+
+
 
 @app.route('/risultati')
 def risultati():
