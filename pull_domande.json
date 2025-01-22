@@ -2914,5 +2914,192 @@
             "Falso"
         ],
         "giusta": "Vero e formano una gerarchia di concetti."
+    },
+    "328": {
+        "domanda":"Nell'ambito della valutazione dei sistemi biometrici la procedura corretta di valutazione degli errori prevede:",
+        "risposte": [
+            "Preferire sempre una stima attraverso il calcolo della probabilità del modello rappresentante l'errore del sistema",
+            "Preferire una stima basata sull'inferenza statistica",
+            "Scegliere una o entrambe le opzioni precedenti in base alla disponibilit\u00e0 dei dati o dei modelli e del caso applicativo"
+        ],
+        "giusta": "Scegliere una o entrambe le opzioni precedenti in base alla disponibilit\u00e0 dei dati o dei modelli e del caso applicativo"
+    },
+    "329": {
+        "domanda":"Rispetto al contesto discusso a lezione, quale è la tecnica che produce immagini sintetiche create utilizzando due input, in cui un criminale combina caratteristiche di un volto, come il movimento, con l'aspetto di un altro volto per creare un nuovo output video sintetico usando modelli anche tridimensionali. L'output presenta le caratteristiche dei tratti facciali dell'individuo genuino ",
+        "risposte": [
+            "Fully-generated images",
+            "Face swaps",
+            "Nessuna delle altre opzioni",
+            "PCA-based image"
+        ],
+        "giusta": "Face swaps"
+    },
+    "330": {
+        "domanda":"Con un sistema ottico ad 1 lente è possibile",
+        "risposte": [
+            "Ottenere magnificazione ma non mettere a fuoco",
+            "Mettere a fuoco e ottenere magnificazione anche senza muovere gli oggetti",
+            "Mettere a fuoco ma non ottenere magnificazione senza muovere gli oggetti"
+        ],
+        "giusta": "Mettere a fuoco ma non ottenere magnificazione senza muovere gli oggetti "
+    },
+    "331": {
+        "domanda":"La funzione di 'Hygh Dynamic range' in un sensore di visione serve",
+        "risposte": [
+            "Ad avere dati utili da regioni ad alta e bassa luminosità nell'immagine evitando saturazione rumore",
+            "A realizzare un range di luminanza maggiore e più simile a quello percepito dall'occhio umano",
+            "Tutte le altre opzioni"
+        ],
+        "giusta": "Tutte le altre opzioni"
+    },
+    "332": {
+        "domanda":"Rispetto alla ISO/IEC 19795 Biometric Performance Testing and Reporting, quale delle seguenti strategie di valutazione corrisponde alla strategia chiamata 'Technology'",
+        "risposte": [
+            "Un sistema biometrico completo e tarato direttamente installato nella applicazione finale e usato con una porzione di utenti che accettano di provare il sistema dietro compilazione di un apposito modulo informativo",
+            "Crearea delle stanze attrezzate dove vengono alloggiate diverse tecnologie che potrebbero essere impiegate nella applicazione in esame che saranno provate con un ristretto gruppo di volontari per verificare le soluzioni più adatte",
+            "Creare un appalto rivolto ai diversi produttori che una volta recepiti i requisiti tecnologici esprimeranno le migliori offerte economiche che verranno valutate in una seconda fase della selezione",
+            "Usare database pubblici di sample biometrici per effettuare test algoritmi"
+        ],
+        "giusta": "Usare database pubblici di sample biometrici per effettuare test algoritmi"
+    },
+    "333": {
+        "domanda":"La detezione automatica delle micro-espressioni",
+        "risposte": [
+            "Viene attualmente realizzata attraverso tecniche pletismografiche",
+            "Non è attualmente realizzabile in quanto mancano sensori capaci di estrarre questo tipo di feature",
+            "Non ha nessun significato biometrico a livello di applicazioni commerciali",
+            "Nessuna delle altre opzioni"
+        ],
+        "giusta": "Nessuna delle altre opzioni"
+    },
+    "334": {
+        "domanda":"L'applicazione da risolvere richiede la valutazione della distribuzione degli impostori in una regione dove la frequenza degli errori è 10-7 (1 parte su 10 milioni). Nel contesto della discusssione fatta in classe, quale delle seguenti opzioni è considerata più corretta?",
+        "risposte": [
+            "Stimare la distribuzione usando l'approccio basato sul calcolo delle probabilità utilizzando volontari con N=100",
+            "Stimare la distribuzione usando le curve presenti in letteratura per sistemi equivalenti o nel datasheet del produttore nella regione di funzionamento richiesta",
+            "Stimare la distribuzione usando l'approccio basato sul calcolo delle probabilità utilizzando volontari con N=500",
+            "Stimare la distribuzione usando l'approccio basato sulla inferenza statistica utilizzando volontari con N=500",
+            "Stimare la distribuzione usando l'approccio basato sulla inferenza statistica utilizzando volontari con N=300"
+        ],
+        "giusta": "Stimare la distribuzione usando le curve presenti in letteratura per sistemi equivalenti o nel datasheet del produttore nella regione di funzionamento richiesta"
+    },
+    "335": {
+        "domanda":"Rispetto alla ISO/IEC 19795 Biometric Performance Testing and Reporting, quale delle seguenti strategie di valutazione corrisponde alla strategia chiamata 'Operational'",
+        "risposte": [
+            "Un sistema biometrico completo e tarato direttamente installato nella applicazione finale e usato con una porzione di utenti che accettano di provare il sistema dietro compilazione di un apposito modulo informativo",
+            "Crearea delle stanze attrezzate dove vengono alloggiate diverse tecnologie che potrebbero essere impiegate nella applicazione in esame che saranno provate con un ristretto gruppo di volontari per verificare le soluzioni più adatte",
+            "Creare un appalto rivolto ai diversi produttori che una volta recepiti i requisiti tecnologici esprimeranno le migliori offerte economiche che verranno valutate in una seconda fase della selezione",
+            "Usare database pubblici di sample biometrici per effettuare test algoritmi"
+        ],
+        "giusta": "Un sistema biometrico completo e tarato direttamente installato nella applicazione finale e usato con una porzione di utenti che accettano di provare il sistema dietro compilazione di un apposito modulo informativo"
+    },
+    "336": {
+        "domanda":"Rispetto alla ISO/IEC 19795 Biometric Performance Testing and Reporting, quale delle seguenti strategie di valutazione corrisponde alla strategia chiamata 'Scenario'",
+        "risposte": [
+            "Un sistema biometrico completo e tarato direttamente installato nella applicazione finale e usato con una porzione di utenti che accettano di provare il sistema dietro compilazione di un apposito modulo informativo",
+            "Creare delle stanze attrezzate dove vengono alloggiate diverse tecnologie che potrebbero essere impiegate nella applicazione in esame che saranno provate con un ristretto gruppo di volontari per verificare le soluzioni più adatte",
+            "Creare un appalto rivolto ai diversi produttori che una volta recepiti i requisiti tecnologici esprimeranno le migliori offerte economiche che verranno valutate in una seconda fase della selezione",
+            "Usare database pubblici di sample biometrici per effettuare test algoritmi"
+        ],
+        "giusta": "Creare delle stanze attrezzate dove vengono alloggiate diverse tecnologie che potrebbero essere impiegate nella applicazione in esame che saranno provate con un ristretto gruppo di volontari per verificare le soluzioni più adatte"
+    },
+    "337":{
+        "domanda":"In accordo alla definizione della norma ISO/IEC 2382-37, un 'identity concealer' è:",
+        "risposte": [
+            "Un individuo che usando una maschera prova ad essere identificato come un individuo registrato nel sistema per entrare.",
+            "Un individuo che per sbaglio prova ad essere ammesso da un sistema biometrico in buona fede, non accorgendosi che non doveva presentare il suo tratto",
+            "Nessuna delle altre opzioni descrive correttamente la figura di un 'Identity Concealer'.",
+            "Un individuo che prova ad impersonificare un utente registrato atteggiandosi e vestendosi in modo simile, anche usando un opportuno make-up."
+        ],
+        "giusta":"Nessuna delle altre opzioni descrive correttamente la figura di un 'Identity Concealer'."
+    },
+    "338":{
+        "domanda":"Nella curva DET di un sistema biometrico in quale regione si trovano le applicazioni forensi",
+        "risposte": [
+            "La curva DET stima parametri diversi da...",
+            "Medio FNMR e medio FMR",
+            "Basso FNMR e alto FMR",
+            "Alto FNMR e basso FMR"
+        ],
+        "giusta":"Basso FNMR e alto FMR"
+    },
+    "339":{
+        "domanda":"Nella curva DET di un sistema biometrico in quale regione si trovano le applicazioni civili",
+        "risposte": [
+            "La curva DET stima parametri diversi da...",
+            "Medio FNMR e medio FMR",
+            "Basso FNMR e alto FMR",
+            "Alto FNMR e basso FMR"
+        ],
+        "giusta":"Medio FNMR e medio FMR"
+    },
+    "340":{
+        "domanda":"Nella curva DET di un sistema biometrico in quale regione si trovano le applicazioni di sicurezza",
+        "risposte": [
+            "La curva DET stima parametri diversi da...",
+            "Medio FNMR e medio FMR",
+            "Basso FNMR e alto FMR",
+            "Alto FNMR e basso FMR"
+        ],
+        "giusta":"Alto FNMR e basso FMR"
+    },
+    "341":{
+        "domanda":"Un sistema biometrico di autenticazione è considerato un…",
+        "risposte": [
+            "Sistema di classificazione multiclasse",
+            "Sistema di classificazione binario-->vero",
+            "dado non truccato",
+            "dado truccato"
+        ],
+        "giusta":"Sistema di classificazione binario"
+    },
+    "342":{
+        "domanda":"La realizzazione del modulo di fusione in un sistema multimodale può essere realizzata da diversi modelli di ML. Diventa molto importante applicare omogeneizzazione, regolarizzazione e normalizzazione, che risultano",
+        "risposte": [
+            "Molto importanti per i sistemi tradizionali su somma, min e max ma meno per reti neurali e alberi",
+            "Meno importanti per i sistemi tradizionali su somma, min e max ma molto per reti neurali e alberi",
+            "Ugualmemnte importanti",
+            "Nessuno degli altri casi"
+        ],
+        "giusta":"Molto importanti per i sistemi tradizionali su somma, min e max ma meno per reti neurali e alberi"
+    },
+    "343":{
+        "domanda":"In quale applicazione potrebbe essere implementato un sistema automatico di riconoscimento delle emozioni?",
+        "risposte": [
+            "valutare le emozioni durante un esame in università",
+            "Nessuna delle altre opzioni",
+            "Per valutare le emozioni in uno spot pubblicitario durante una sessione di analisi di laboratorio senza diffusione delle immagini",
+            "per valutare le emozioni durante un colloquio"
+        ],
+        "giusta":"Per valutare le emozioni in uno spot pubblicitario durante una sessione di analisi di laboratorio senza diffusione delle immagini"
+    },
+    "344":{
+        "domanda":"Qual è l'approccio tradizionale di computazione riguardo la classificazione delle emozioni?",
+        "risposte": [
+            "non vi sono approcci tradizionali perché è un problema troppo complesso",
+            "Si esegue la sequenza 1)Face detection 2)feature extraction 3)Classification",
+            "Si esegue la sequenza 1)Feature extraction 2)Face detection 3)Classification",
+            "Prevede la classificazione diretta da immagine in ingresso"
+        ],
+        "giusta":"Si esegue la sequenza 1)Face detection 2)feature extraction 3)Classification"
+    },
+    "345":{
+        "domanda":"Se la stima della probabilità p di errore del sistema biometrico in autenticazione produce la valutazione p=0.05 quale dei seguenti casi è più corretto considerando 100 utenti?",
+        "risposte": [
+            "30 persone con errore 0% e 70 con errore 7,1%",
+            "90 persone con errore 0% e 10 con errore 50%",
+            "50 persone con errore 0% e 50 con errore 10%",
+            "Non si può sapere a priori"
+        ],
+        "giusta":"Non si può sapere a priori"
+    },
+    "346":{
+        "domanda":"Nelle applicazioni di sicurezza che controllano oggetti in movimento",
+        "risposte": [
+            "serve più tempo di esposizione rispetto agli oggetti fermi",
+            "serve meno tempo di esposizione rispetto agli oggetti fermi",
+            "Non servono particolari cautele"
+        ],
+        "giusta":"serve meno tempo di esposizione rispetto agli oggetti fermi"
     }
 }
