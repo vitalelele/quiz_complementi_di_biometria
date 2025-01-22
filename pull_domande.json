@@ -2941,7 +2941,7 @@
             "Mettere a fuoco e ottenere magnificazione anche senza muovere gli oggetti",
             "Mettere a fuoco ma non ottenere magnificazione senza muovere gli oggetti"
         ],
-        "giusta": "Mettere a fuoco ma non ottenere magnificazione senza muovere gli oggetti "
+        "giusta": "Mettere a fuoco ma non ottenere magnificazione senza muovere gli oggetti"
     },
     "331": {
         "domanda":"La funzione di 'Hygh Dynamic range' in un sensore di visione serve",
@@ -3047,7 +3047,7 @@
         "domanda":"Un sistema biometrico di autenticazione è considerato un…",
         "risposte": [
             "Sistema di classificazione multiclasse",
-            "Sistema di classificazione binario-->vero",
+            "Sistema di classificazione binario",
             "dado non truccato",
             "dado truccato"
         ],

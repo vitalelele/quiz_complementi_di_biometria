@@ -1,0 +1,50 @@
+{
+    "1": {
+        "domanda": "Se non ho dati, per calcolare degli istogrammi, posso usare dei volontari?",
+        "risposte": [
+            "Vero",
+            "Falso"
+        ],
+        "giusta": "Vero"
+    },
+    "2": {
+        "domanda": "Con un sensore di acquisizione a tre canali per 8 bit per pixel?",
+        "risposte": [
+            "Si possono ottenere 256 colori",
+            "Si possono ottenere solo 16,7 milioni di colori",
+            "Non sono utilizzabili nei sistemi biometrici perchè hanno un numero limitato di colori",
+            "Non sono utilizzabili nei sistemi biometrici perchè hanno una risoluzione troppo limitata"
+        ],
+        "giusta": "Si possono ottenere solo 16,7 milioni di colori"
+    },
+    "3": {
+        "domanda": "Quale delle affermazioni che seguono sono più corrette?",
+        "risposte": [
+            "Con immagini ottenute ad ampio angolo di visuale più facile acquisire più tratti biometrici",
+            "Con sensori con maggior numero di bit per pixel si possono impiegare algoritmi migliori di enhancement di filtraggio",
+            "Con sensori con maggiori soluzioni si possono analizzare, del tratto biometrico, scale o livelli diversi",
+            "Tutte le precedenti",
+            "Nessuna delle precedenti"
+        ],
+        "giusta": "Tutte le precedenti"
+    },
+    "4": {
+        "domanda": "L'iride è un dato che per le sue proprietà biometriche?",
+        "risposte": [
+            "Utilizzabile nelle applicazioni protezione del template basate su bio criptazione",
+            "Non è applicabile per via della lunghezza del template che lo realizza",
+            "Non applicabile per via della presenza dei bit di mascheratura necessari al suo funzionamento"
+        ],
+        "giusta": "Utilizzabile nelle applicazioni protezione del template basate su bio criptazione"
+    },
+    "5": {
+        "domanda": "A livello 2 delle impronte cosa si può osservare?",
+        "risposte": [
+            "Minutiae",
+            "Biforcazioni",
+            "Ridge",
+            "Tutte le precedenti",
+            "Nessuna delle precedenti"
+        ],
+        "giusta": "Tutte le precedenti"
+    }}

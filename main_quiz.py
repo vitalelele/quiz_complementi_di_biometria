@@ -38,6 +38,7 @@ def index():
         session['saltate'] = []
         session['mostrate'] = []
         session['feedback'] = None
+        session['errori'] = 0  # Aggiunto contatore errori
         save_quiz_state(session)
 
     indice_corrente = session['indice']
@@ -94,7 +95,7 @@ def rispondi():
                     session['feedback'] = 'Corretto! 🎉'
                     session['indice'] += 1  # Avanza solo se la risposta è corretta
                 else:
-                    # Se la risposta è sbagliata, non si avanza
+                    session['errori'] += 1  # Incrementa gli errori
                     session['feedback'] = f'Sbagliato! La risposta corretta era: {domanda["giusta"]}. Prova ancora.'
             else:
                 session['feedback'] = 'Per favore, seleziona una risposta prima di inviare.'
@@ -104,18 +105,24 @@ def rispondi():
     save_quiz_state(session)  # Salva lo stato del quiz
     return redirect(url_for('index'))
 
-
-
 @app.route('/risultati')
 def risultati():
     punteggio = session.get('punti', 0)
     totale = len(session['domande'])
+    errori = session.get('errori', 0)
+    punteggio_effettivo = max(punteggio - errori, 0)  # Calcola il punteggio netto
     saltate = session.get('saltate', [])
     mostrate = session.get('mostrate', [])
     if os.path.exists(QUIZ_STATE_FILE):
         os.remove(QUIZ_STATE_FILE)  
     
-    return render_template('risultati.html', punteggio=punteggio, totale=totale, saltate=saltate, mostrate=mostrate, domande=domande)
+    return render_template('risultati.html', 
+                           punteggio=punteggio_effettivo, 
+                           totale=totale, 
+                           errori=errori, 
+                           saltate=saltate, 
+                           mostrate=mostrate, 
+                           domande=domande)
 
 @app.route('/reset')
 def reset():
@@ -124,6 +131,7 @@ def reset():
         os.remove(QUIZ_STATE_FILE)
     session.clear()
     return redirect(url_for('index'))
+
 
 if __name__ == '__main__':
     app.run(debug=True)
