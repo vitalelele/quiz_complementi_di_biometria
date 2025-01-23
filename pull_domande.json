@@ -3089,9 +3089,9 @@
             "30 persone con errore 0% e 70 con errore 7,1%",
             "90 persone con errore 0% e 10 con errore 50%",
             "50 persone con errore 0% e 50 con errore 10%",
-            "Non si può sapere a priori"
+            "Non si può sapere a priori, tutte le altre opzioni potrebbero essere plausibili"
         ],
-        "giusta":"Non si può sapere a priori"
+        "giusta":"Non si può sapere a priori, tutte le altre opzioni potrebbero essere plausibili"
     },
     "346":{
         "domanda":"Nelle applicazioni di sicurezza che controllano oggetti in movimento",
@@ -3101,5 +3101,82 @@
             "Non servono particolari cautele"
         ],
         "giusta":"serve meno tempo di esposizione rispetto agli oggetti fermi"
-    }
+    },
+    "347":{
+        "domanda":"Da studi recenti, quale è l'accuratezza media di un umano nel riconoscimento di un video deepfake realizzato allo stato dell'arte?",
+        "risposte": [
+            "90%",
+            "5%",
+            "20%-50%",
+            "99%",
+            "1%"
+        ],
+        "giusta":"20%-50%"
+    },
+    "348":{
+        "domanda":"Rispetto al contesto discusso a lezione sui deepfake, le tecniche di voice cloning sono da considerarsi:",
+        "risposte": [
+            "Un tipo molto particolare di attacco attraverso impersonificazione dove un attaccante ha imparato a imitare le caratteristiche fonetiche dell'utente da attaccare spostando prosodia e caratteristiche di basso livello fonetico come la intonazione il più possibile vicine all'utente da impersonificare",
+            "Non sono tecniche applicabili in contesti di sicurezza ma principalmente nel miglioramento della voce in tecniche di editing audio in editoria multimediale",
+            "Tecniche applicabili solo offline creando dei sample in anticipo rispetto all'attacco",
+            "Tecniche applicabili anche in realtime creando dei sample durante l'attacco"
+        ],
+        "giusta":"Tecniche applicabili anche in realtime creando dei sample durante l'attacco"
+    },
+    "349":{
+        "domanda":"Parlando della classificazione delle emozioni umane attraverso l'analisi delle immagini, in accordo alla discussione condotta a lezione e tenenedo conto dei recenti studi sull'argomento. Quale delle posizioni sotto riportate è più utile considerare nella implementazione delle applicazioni?",
+        "risposte": [
+            "Le emozioni sono <hard-wired> generali e leggibili, quindi è perfettamente corretto usare software che le riconoscono dalle immagini.",
+            "Le emozioni sono costruite dal cervello piuttosto che essere innate e universali. Persone diverse esprimono diversamente le emozioni quindi è possibile usare software che le riconoscano dalle immagini.",
+            "Per quanto potenzialmente interessante per molte applicazioni, non avendo raggiunto la comunità scientifica un accordo sulla classificazione delle emozioni non vengono utilizzate nelle applicazioni.",
+            "E' possibile usare modelli di ML per classificare le posizioni/movimenti facciali che spesso vengono interpretati come una specifica emozione, ma non possiamo garantire di classificare una vera emozione interna al soggetto."
+        ],
+        "giusta":"E' possibile usare modelli di ML per classificare le posizioni/movimenti facciali che spesso vengono interpretati come una specifica emozione, ma non possiamo garantire di classificare una vera emozione interna al soggetto."
+    },
+    "350": {
+        "domanda":"Le caratteristiche seguenti sono maggiormente tipiche in quale applicazione? Caratteristiche in esame: rumore presente nei dati in ingresso (ad esempio condizioni ottimali di illuminazione per il volto, 0 di umidita per le impronte, ...), variabilità intra-classe (variazioni di posa nel volto, raffreddore nella voce, ferite su un polpastrello ...)",
+        "risposte": [
+            "Non sono caratteristiche presenti nei sistemi biometrici",
+            "Sistemi multimodali",
+            "Sistemi monomodali e Sistemi multimodali in pari grado",
+            "Sono presenti quando si usano moduli di machine learning nei sistemi biometrici",
+            "Sistemi monomodali"
+        ],
+        "giusta":"Sistemi monomodali"
+    },
+    "351":{
+        "domanda": "Un sistema biometrico che usa per il riconoscimento l'immagine del volto e delle impronte, in quale categoria dovrebbe appartenere?",
+        "risposte": [
+            "Nessuna delle altre opzioni",
+            "Multibiometric",
+            "Unibiometric",
+            "Multimodal",
+            "Unimodal biometric"
+        ],
+        "giusta":"Multimodal"
+    },
+    "352":{
+        "domanda": "Rispetto alla tassonomia degli attacchi avversari per i sistemi biometrici discussa a lezione quali delle seguenti tipologie è definita nel seguente modo 'Attacchi che modificano l'input per influenzare il modello. Ad esempio, aggiungendo modifiche a immagini mediche per influenzare la classificazione'",
+        "risposte": [
+            "Inferenza",
+            "Estrazione",
+            "Avvelenamento",
+            "Nerssuna delle altre opzioni",
+            "Evasione"
+        ],
+        "giusta":"Evasione"
+    },
+"353": {
+    "domanda": "In un sistema biometrico multimodale, i punteggi di corrispondenza sono stati calcolati per tre modalità biometriche con i seguenti valori di similitudine (score match):\nScore1 = 0.5\nScore2 = 0.7\nScore3 = 0.9\nLa soglia di accettazione è fissata a 0.9. Viene scelto il sistema a voto maggioritario. Quale caso si ha?",
+    "risposte": [
+        "L'utente è autenticato perché almeno uno dei sistemi lo ha indentificato",
+        "Nessuno degli altri casi precedenti",
+        "L'utente è autenticato perché almeno 2 su 3 dei sistemi lo sistemi lo ha indentificato",
+        "L'utente non è autenticato",
+        "L'utente è autenticato perché la somma degli score è maggiore di 0.6",
+        "L'utente è autenticato perché tutti e 3 i sistemi lo sistemi lo ha indentificato"
+    ],
+    "giusta": "L'utente non è autenticato"
 }
+}
+    
