@@ -3228,11 +3228,11 @@
         "Vero",
         "Falso"
     ],
-    "giusta":"Falso"
+    "giusta":"Vero"
 },
 "359": {
     "domanda":"Considera i seguenti fattori: effetti casuali (rumore del dispositivo), variazioni dello sfondo, variazioni tratto (invecchiamento, posizione, epressione, usura), parziali occlusioni. Quale caratteristica posso aumentare?",
-    "rispose": [
+    "risposte": [
         "La variabilità intraclasse e contemporaneamente la similitudine interclasse",
         "Variabilità intraclasse",
         "In alcuni casi la variabilità intraclasse e in altri la similitudine interclasse in base a come si regola la soglia del sistema biometrico",
