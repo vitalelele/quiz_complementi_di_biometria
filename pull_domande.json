@@ -3177,6 +3177,69 @@
         "L'utente è autenticato perché tutti e 3 i sistemi lo sistemi lo ha indentificato"
     ],
     "giusta": "L'utente non è autenticato"
+},
+"354":{
+    "domanda":"Rispetto alla tassonomia degli attacchi avversari per i sistemi biometrici discussa a lezione quali delle seguenti tipologie è definita nel seguente modo 'Attacchi che modificano i dati di addestramento per aggiungere una backdoor.'",
+    "risposte": [
+        "Inferenza",
+        "Estrazione",
+        "Avvelenamento",
+        "Nerssuna delle altre opzioni",
+        "Evasione"
+    ],
+    "giusta":"Avvelenamento"
+},
+"355":{
+    "domanda":"Rispetto alla tassonomia degli attacchi avversari per i sistemi biometrici discussa a lezione quali delle seguenti tipologie è definita nel seguente modo 'Attacchi che rubano un modello proprietario.'",
+    "risposte": [
+        "Inferenza",
+        "Estrazione",
+        "Avvelenamento",
+        "Nerssuna delle altre opzioni",
+        "Evasione"
+    ],
+    "giusta":"Estrazione"
+},
+"356":{
+    "domanda":"Rispetto alla tassonomia degli attacchi avversari per i sistemi biometrici discussa a lezione quali delle seguenti tipologie è definita nel seguente modo 'Attacchi che ottengono informazioni su dati privati.'",
+    "risposte": [
+        "Inferenza",
+        "Estrazione",
+        "Avvelenamento",
+        "Nerssuna delle altre opzioni",
+        "Evasione"
+    ],
+    "giusta":"Inferenza"
+},
+"357":{
+    "domanda":"Nella progettazione avanzata dei sistemi biometrici è possibile impiegare la tecnica di fusione a livello di feature. Qualle delle seguenti affermazioni è corretta?",
+    "risposte": [
+        "E' una tecnica che spesso è applicata su vettori di feature numeriche perché semplifica la fase di fusione",
+        "E' una tecnica potente per i miglioramenti di accuratezza che si possono ottenere, ma è più complessa perché occorre creare un DB apposito spesso non commerciale",
+        "Tutte le altre opzioni (tranne 'Nessuna delle altre opzioni')",
+        "Nessuna delle altre opzioni",
+        "E' una tecnica potente per i miglioramenti di accuratezza che si possono ottenere, ma è più complessa perché occorre creare un matcher specifico"
+    ],
+    "giusta":"Tutte le altre opzioni (tranne 'Nessuna delle altre opzioni')"
+},
+"358":{
+    "domanda":"E' possibile creare un sistema biometrico per l'iride completo di tutte le parti ottiche miniaturizzato in pochi millimetri.",
+    "risposte": [
+        "Vero",
+        "Falso"
+    ],
+    "giusta":"Falso"
+},
+"359": {
+    "domanda":"Considera i seguenti fattori: effetti casuali (rumore del dispositivo), variazioni dello sfondo, variazioni tratto (invecchiamento, posizione, epressione, usura), parziali occlusioni. Quale caratteristica posso aumentare?",
+    "rispose": [
+        "La variabilità intraclasse e contemporaneamente la similitudine interclasse",
+        "Variabilità intraclasse",
+        "In alcuni casi la variabilità intraclasse e in altri la similitudine interclasse in base a come si regola la soglia del sistema biometrico",
+        "Non impattano particolarmente alla luce delle più recenti tecnologie basate sulle reti deep che hanno risolto questo tipo di problematiche delle applicazioni",
+        "Similitudine interclasse"
+    ],
+    "giusta":"Variabilità intraclasse"
 }
 }
     
